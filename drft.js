@@ -71,7 +71,7 @@ class Drft {
 
                 await this.connectWebSocket(token);
 
-                await this.waitWithCountdown(2);
+                await this.waitWithCountdown(5);
                 await this.closeWebSocket();
             } catch (error) {
                 this.log(`Lỗi khi xử lý token ${token}: ${error.message}`);
@@ -162,7 +162,6 @@ class Drft {
                 })
             };
             this.sendMessage(message);
-            await this.waitWithCountdown(1);
         }
     }
 
